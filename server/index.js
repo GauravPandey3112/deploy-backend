@@ -12,5 +12,9 @@ app.use(express.json());
 app.use("/admin", adminRouter)
 app.use("/user", userRouter)
 
+app.get('/', (req, res) => {
+    res.send('Deployment successful!')
+})
+
 
 app.listen(3000, () => console.log('Server running on port 3000'));
